@@ -1,3 +1,40 @@
 *, *::beofre,*::after{
     box-sizing: border-box;
 }
+
+.wrapper{
+    max-width:1200px;
+}
+
+body{
+   font-family:poppins
+}
+
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding-left: 0;
+}
+
+nav li a {
+    text-decoration: none;
+    margin-left: 2em;
+    color:#222 ;
+    font-size: 1.802rem;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+#sweetheart-affair .images{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+}
