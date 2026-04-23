@@ -13,6 +13,12 @@ body{
 header .wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
 }
 
 nav ul {
@@ -28,19 +34,14 @@ nav li a {
     font-size: 1.802rem;
 }
 
-img{
-    max-width: 100%;
-    height: auto;
-}
-
 #sweetheart-affair .images{
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: (2,1fr);
     gap: 15px;
     grid-template-areas: 
-    "i1 i1 i2 i2"
-    "i3 i3 i4 i4"; 
+    "i1 i1 i1"
+    "i2 i3 i4";
 }
 
 .image1 { grid-area: i1;}
@@ -50,7 +51,7 @@ img{
 .image3 { grid-area: i3;}
 
 .image4 { grid-area: i4;}
- 
+
 .sweetheart-p{
     display: block;
 }
@@ -64,6 +65,45 @@ img{
     border-radius: 5px ;
     margin-top: auto;
 }
+
+#comments .wrapper {
+    background: #000;
+    color: #fff;
+    display: grid;
+    text-align: left;
+}
+
+#comments h2{
+    text-align: center;
+}
+
+#flavours{
+    text-align: center;
+}
+
+#flavours .images{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* PAGE 768 */
+
+@media (min-width: 768px) {
+
+#sweetheart-affair .images{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 15px;
+    grid-template-areas: 
+    "i1 i1 i2 i2"
+    "i3 i3 i4 i4"; 
+}
+
+
+ 
 
 .btn:hover{
     background-color: #fff;
@@ -111,6 +151,7 @@ cite{
 #flavours .images {
     display: grid;
     grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto;
     gap: 30px;
 }
 
@@ -124,4 +165,50 @@ footer{
     color: #fff;
     text-align: center;
     padding: 10px;
+}
+
+}
+
+/* PAGE 960 */
+@media (min-width:960px){
+
+#sweetheart-affair .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.images img {
+    width: 100%;
+    display: block;
+
+}
+
+/* LARGE IMAGE */
+.image1 {
+    grid-column: span 2;
+}
+
+.sweetheart-p {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    background: black;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    width: fit-content;
+}
+
 }
